@@ -20,7 +20,13 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
   padding: 2em;
+}
+
+.logo-wrapper {
+  display: flex;
+  min-width: 100%;
 }
 
 .logo {
@@ -48,6 +54,12 @@
   font-size: 1.1em;
   max-width: 40ch;
   margin-top: 1em;
+}
+
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .register {
@@ -88,4 +100,52 @@
 .icon:hover {
   color: var(--soft-magenta);
   border: solid 1px var(--soft-magenta);
+}
+
+@media screen and (min-width: 1000px) {
+  .App {
+    background-size: cover !important;
+    background: var(--violet) url("./img/bg-desktop.svg") no-repeat;
+  }
+
+  .logo {
+    margin-bottom: 10%;
+  }
+
+  .double-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .col-1 {
+    min-width: 60%;
+  }
+
+  .col-2 {
+    min-width: 40%;
+    padding-left: 1em;
+    padding-bottom: 5em;
+    align-items: flex-start;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  .heading {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .register {
+    min-width: 50%;
+  }
+
+  .social {
+    min-width: 100%;
+
+    padding-left: 80%;
+    padding-right: 5%;
+  }
 }
